@@ -8,12 +8,12 @@ v0.1
 
 --
 -- STEEL LADDER
-minetest.register_node("morestuff:steel_ladder", {
+minetest.register_node("morestuff_nextgen:steel_ladder", {
 	description = "Steel Ladder",
 	drawtype = "signlike",
-	tiles = {"morestuff_steelladder.png"},
-	inventory_image = "morestuff_steelladder.png",
-	wield_image = "morestuff_steelladder.png",
+	tiles = {"morestuff_nextgen_steelladder.png"},
+	inventory_image = "morestuff_nextgen_steelladder.png",
+	wield_image = "morestuff_nextgen_steelladder.png",
 	paramtype = "light",
 	paramtype2 = "wallmounted",
 	is_ground_content = true,
@@ -30,7 +30,7 @@ minetest.register_node("morestuff:steel_ladder", {
 })
 
 minetest.register_craft({
-	output = '"morestuff:steel_ladder" 1',
+	output = '"morestuff_nextgen:steel_ladder" 1',
 	recipe = {
 		{'"default:steel_ingot"','','"default:steel_ingot"'},
 		{'"default:steel_ingot"','"default:steel_ingot"','"default:steel_ingot"'},
@@ -40,113 +40,113 @@ minetest.register_craft({
 
 -- NAQUEDA REACTOR
 
-minetest.register_node("morestuff:naqueda_reactor", {
+minetest.register_node("morestuff_nextgen:naqueda_reactor", {
 	visual_scale = 1,
-	tile_images = {"morestuff_naqueda_reactor.png"},{"morestuff_naqueda_reactor.png"},{"morestuff_naqueda_reactor.png"},{"morestuff_naqueda_reactor.png"},{"morestuff_naqueda_reactor.png"},{"morestuff_naqueda_reactor.png"},
-	inventory_image = "morestuff_naqueda_reactor.png",
+	tile_images = {"morestuff_nextgen_naqueda_reactor.png"},{"morestuff_nextgen_naqueda_reactor.png"},{"morestuff_nextgen_naqueda_reactor.png"},{"morestuff_nextgen_naqueda_reactor.png"},{"morestuff_nextgen_naqueda_reactor.png"},{"morestuff_nextgen_naqueda_reactor.png"},
+	inventory_image = "morestuff_nextgen_naqueda_reactor.png",
 	walkable = true,
 	groups = {cracky=2},
     	description="Naqueda Reactor",
 })
 
 minetest.register_craft({
-	output = '"morestuff:naqueda_reactor" 1',
+	output = '"morestuff_nextgen:naqueda_reactor" 1',
 	recipe = {
 		{'"default:steel_ingot"','"default:steel_ingot"','"default:steel_ingot"'},
-		{'"default:steel_ingot"','"morestuff:naqueda_lump"','"default:steel_ingot"'},
+		{'"default:steel_ingot"','"morestuff_nextgen:naqueda_lump"','"default:steel_ingot"'},
 		{'"default:steel_ingot"','"default:steel_ingot"','"default:steel_ingot"'},
 	}
 })
 
 minetest.register_on_placenode(function(pos, newnode, placer)
-	-- if newnode.name == "morestuff:naqueda_reactor" then
+	-- if newnode.name == "morestuff_nextgen:naqueda_reactor" then
 	-- 	mesecon:receptor_on(pos)
 	-- end
 end)
 
 minetest.register_on_dignode(
 	function(pos, oldnode, digger)
-		-- if oldnode.name == "morestuff:naqueda_reactor" then
+		-- if oldnode.name == "morestuff_nextgen:naqueda_reactor" then
 		-- 	mesecon:receptor_off(pos)
 		-- end	
 	end
 )
 
--- mesecon:add_receptor_node("morestuff:naqueda_reactor")
+-- mesecon:add_receptor_node("morestuff_nextgen:naqueda_reactor")
 
 
 --
 -- Blocks
 
-minetest.register_node( "morestuff:mineral_green_magicite", {
+minetest.register_node( "morestuff_nextgen:mineral_green_magicite", {
 	description = "Green Magicite",
-	tile_images = { "default_stone.png^morestuff_mineral_green_magicite.png" },
+	tile_images = { "default_stone.png^morestuff_nextgen_mineral_green_magicite.png" },
 	is_ground_content = true,
 	groups = {cracky=3},
 	sounds = default.node_sound_stone_defaults(),
-	drop = 'craft "morestuff:green_magicite" 1',
+	drop = 'craft "morestuff_nextgen:green_magicite" 1',
 })
 
-minetest.register_node( "morestuff:mineral_blue_magicite", {
+minetest.register_node( "morestuff_nextgen:mineral_blue_magicite", {
 	description = "Blue Magicite",
-	tile_images = { "default_stone.png^morestuff_mineral_blue_magicite.png" },
+	tile_images = { "default_stone.png^morestuff_nextgen_mineral_blue_magicite.png" },
 	is_ground_content = true,
 	groups = {cracky=3},
 	sounds = default.node_sound_stone_defaults(),
-	drop = 'craft "morestuff:blue_magicite" 1',
+	drop = 'craft "morestuff_nextgen:blue_magicite" 1',
 })
 
-minetest.register_node( "morestuff:mineral_red_magicite", {
+minetest.register_node( "morestuff_nextgen:mineral_red_magicite", {
 	description = "Red Magicite",
-	tile_images = { "default_stone.png^morestuff_mineral_red_magicite.png" },
+	tile_images = { "default_stone.png^morestuff_nextgen_mineral_red_magicite.png" },
 	is_ground_content = true,
 	groups = {cracky=3},
 	sounds = default.node_sound_stone_defaults(),
-	drop = 'craft "morestuff:red_magicite" 1',
+	drop = 'craft "morestuff_nextgen:red_magicite" 1',
 })
 
-minetest.register_node( "morestuff:mineral_white_magicite", {
+minetest.register_node( "morestuff_nextgen:mineral_white_magicite", {
 	description = "White Magicite",
-	tile_images = { "default_stone.png^morestuff_mineral_white_magicite.png" },
+	tile_images = { "default_stone.png^morestuff_nextgen_mineral_white_magicite.png" },
 	is_ground_content = true,
 	groups = {cracky=3},
 	sounds = default.node_sound_stone_defaults(),
-	drop = 'craft "morestuff:white_magicite" 1',
+	drop = 'craft "morestuff_nextgen:white_magicite" 1',
 })
 
-minetest.register_node( "morestuff:mineral_naqueda", {
+minetest.register_node( "morestuff_nextgen:mineral_naqueda", {
 	description = "Naqueda",
-	tile_images = { "default_stone.png^morestuff_mineral_naqueda.png" },
+	tile_images = { "default_stone.png^morestuff_nextgen_mineral_naqueda.png" },
 	is_ground_content = true,
 	groups = {cracky=3},
 	sounds = default.node_sound_stone_defaults(),
-	drop = 'craft "morestuff:naqueda_lump" 1',
+	drop = 'craft "morestuff_nextgen:naqueda_lump" 1',
 })
 
-minetest.register_node( "morestuff:mineral_xoron", {
+minetest.register_node( "morestuff_nextgen:mineral_xoron", {
 	description = "Xoron Ore",
-	tile_images = { "default_stone.png^morestuff_mineral_xoron.png" },
+	tile_images = { "default_stone.png^morestuff_nextgen_mineral_xoron.png" },
 	is_ground_content = true,
 	groups = {cracky=3},
 	sounds = default.node_sound_stone_defaults(),
-	drop = 'craft "morestuff:xoron_lump" 1',
+	drop = 'craft "morestuff_nextgen:xoron_lump" 1',
 })
 
-minetest.register_node( "morestuff:mineral_zeron", {
+minetest.register_node( "morestuff_nextgen:mineral_zeron", {
 	description = "Zeron Ore",
-	tile_images = { "default_stone.png^morestuff_mineral_zeron.png" },
+	tile_images = { "default_stone.png^morestuff_nextgen_mineral_zeron.png" },
 	is_ground_content = true,
 	groups = {cracky=3},
 	sounds = default.node_sound_stone_defaults(),
-	drop = 'craft "morestuff:zeron_lump" 1',
+	drop = 'craft "morestuff_nextgen:zeron_lump" 1',
 })
 
 
 -- Items
 
-minetest.register_tool("morestuff:steel_battle_axe", {
+minetest.register_tool("morestuff_nextgen:steel_battle_axe", {
 	description = "Steel Battle Axe",
-	inventory_image = "morestuff_battleaxe.png",
+	inventory_image = "morestuff_nextgen_battleaxe.png",
 	tool_capabilities = {
 		full_punch_interval = 1.10,
 		max_drop_level=3,
@@ -158,9 +158,9 @@ minetest.register_tool("morestuff:steel_battle_axe", {
 	}
 })
 
-minetest.register_tool("morestuff:mese_battle_axe", {
+minetest.register_tool("morestuff_nextgen:mese_battle_axe", {
 	description = "MESE Battle Axe",
-	inventory_image = "morestuff_mese_battleaxe.png",
+	inventory_image = "morestuff_nextgen_mese_battleaxe.png",
 	tool_capabilities = {
 		full_punch_interval = 0.90,
 		max_drop_level=3,
@@ -172,82 +172,82 @@ minetest.register_tool("morestuff:mese_battle_axe", {
 	}
 })
 
-minetest.register_craftitem( "morestuff:steel_longsword_blade", {
+minetest.register_craftitem( "morestuff_nextgen:steel_longsword_blade", {
 	description = "Steel Longsword Blade",
-	inventory_image = "morestuff_longsword_blade.png",
+	inventory_image = "morestuff_nextgen_longsword_blade.png",
 	on_place_on_ground = minetest.craftitem_place_item,
 })
 
-minetest.register_craftitem( "morestuff:green_magicite", {
+minetest.register_craftitem( "morestuff_nextgen:green_magicite", {
 	description = "Green Magicite",
-	inventory_image = "morestuff_green_magicite.png",
+	inventory_image = "morestuff_nextgen_green_magicite.png",
 	on_place_on_ground = minetest.craftitem_place_item,
 })
 
-minetest.register_craftitem( "morestuff:blue_magicite", {
+minetest.register_craftitem( "morestuff_nextgen:blue_magicite", {
 	description = "Blue Magicite",
-	inventory_image = "morestuff_blue_magicite.png",
+	inventory_image = "morestuff_nextgen_blue_magicite.png",
 	on_place_on_ground = minetest.craftitem_place_item,
 })
 
-minetest.register_craftitem( "morestuff:red_magicite", {
+minetest.register_craftitem( "morestuff_nextgen:red_magicite", {
 	description = "Red Magicite",
-	inventory_image = "morestuff_red_magicite.png",
+	inventory_image = "morestuff_nextgen_red_magicite.png",
 	on_place_on_ground = minetest.craftitem_place_item,
 })
 
-minetest.register_craftitem( "morestuff:white_magicite", {
+minetest.register_craftitem( "morestuff_nextgen:white_magicite", {
 	description = "White Magicite",
-	inventory_image = "morestuff_white_magicite.png",
+	inventory_image = "morestuff_nextgen_white_magicite.png",
 	on_place_on_ground = minetest.craftitem_place_item,
 })
 
-minetest.register_craftitem( "morestuff:naqueda_lump", {
+minetest.register_craftitem( "morestuff_nextgen:naqueda_lump", {
 	description = "Naqueda",
-	inventory_image = "morestuff_naqueda_lump.png",
+	inventory_image = "morestuff_nextgen_naqueda_lump.png",
 	on_place_on_ground = minetest.craftitem_place_item,
 })
 
-minetest.register_craftitem( "morestuff:nuclear_waste", {
+minetest.register_craftitem( "morestuff_nextgen:nuclear_waste", {
 	description = "Nuclear Waste",
-	inventory_image = "morestuff_nuclear_waste.png",
+	inventory_image = "morestuff_nextgen_nuclear_waste.png",
 	on_use = minetest.item_eat(-19),
 	on_place_on_ground = minetest.craftitem_place_item,
 })
 
-minetest.register_craftitem( "morestuff:gopper_ingot", {
+minetest.register_craftitem( "morestuff_nextgen:gopper_ingot", {
 	description = "Gopper ingot",
-	inventory_image = "morestuff_gopper_ingot.png",
+	inventory_image = "morestuff_nextgen_gopper_ingot.png",
 	on_place_on_ground = minetest.craftitem_place_item,
 })
 
-minetest.register_craftitem( "morestuff:zeron_lump", {
+minetest.register_craftitem( "morestuff_nextgen:zeron_lump", {
 	description = "Lump of Zeron",
-	inventory_image = "morestuff_zeron_lump.png",
+	inventory_image = "morestuff_nextgen_zeron_lump.png",
 	on_place_on_ground = minetest.craftitem_place_item,
 })
 
-minetest.register_craftitem( "morestuff:zeron_ingot", {
+minetest.register_craftitem( "morestuff_nextgen:zeron_ingot", {
 	description = "Zeron ingot",
-	inventory_image = "morestuff_zeron_ingot.png",
+	inventory_image = "morestuff_nextgen_zeron_ingot.png",
 	on_place_on_ground = minetest.craftitem_place_item,
 })
 
-minetest.register_craftitem( "morestuff:xoron_lump", {
+minetest.register_craftitem( "morestuff_nextgen:xoron_lump", {
 	description = "Lump of Xoron",
-	inventory_image = "morestuff_xoron_lump.png",
+	inventory_image = "morestuff_nextgen_xoron_lump.png",
 	on_place_on_ground = minetest.craftitem_place_item,
 })
 
-minetest.register_craftitem( "morestuff:xoron_ingot", {
+minetest.register_craftitem( "morestuff_nextgen:xoron_ingot", {
 	description = "Xoron ingot",
-	inventory_image = "morestuff_xoron_ingot.png",
+	inventory_image = "morestuff_nextgen_xoron_ingot.png",
 	on_place_on_ground = minetest.craftitem_place_item,
 })
 
-minetest.register_tool("morestuff:sword_earthsword", {
+minetest.register_tool("morestuff_nextgen:sword_earthsword", {
 	description = "Earth Sword",
-	inventory_image = "morestuff_tool_earthsword.png",
+	inventory_image = "morestuff_nextgen_tool_earthsword.png",
 	tool_capabilities = {
 		full_punch_interval = 0.45,
 		max_drop_level=3,
@@ -260,9 +260,9 @@ minetest.register_tool("morestuff:sword_earthsword", {
 	}
 })
 
-minetest.register_tool("morestuff:sword_watersword", {
+minetest.register_tool("morestuff_nextgen:sword_watersword", {
 	description = "Water Sword",
-	inventory_image = "morestuff_tool_watersword.png",
+	inventory_image = "morestuff_nextgen_tool_watersword.png",
 	tool_capabilities = {
 		full_punch_interval = 0.45,
 		max_drop_level=3,
@@ -274,9 +274,9 @@ minetest.register_tool("morestuff:sword_watersword", {
 	}
 })
 
-minetest.register_tool("morestuff:sword_firesword", {
+minetest.register_tool("morestuff_nextgen:sword_firesword", {
 	description = "Fire Sword",
-	inventory_image = "morestuff_tool_firesword.png",
+	inventory_image = "morestuff_nextgen_tool_firesword.png",
 	tool_capabilities = {
 		full_punch_interval = 0.45,
 		max_drop_level=3,
@@ -288,9 +288,9 @@ minetest.register_tool("morestuff:sword_firesword", {
 	}
 })
 
-minetest.register_tool("morestuff:sword_icesword", {
+minetest.register_tool("morestuff_nextgen:sword_icesword", {
 	description = "Ice Sword",
-	inventory_image = "morestuff_tool_icesword.png",
+	inventory_image = "morestuff_nextgen_tool_icesword.png",
 	tool_capabilities = {
 		full_punch_interval = 0.45,
 		max_drop_level=3,
@@ -302,9 +302,9 @@ minetest.register_tool("morestuff:sword_icesword", {
 	}
 })
 
-minetest.register_tool("morestuff:sword_steel_longsword", {
+minetest.register_tool("morestuff_nextgen:sword_steel_longsword", {
 	description = "Steel Longsword",
-	inventory_image = "morestuff_tool_longsword.png",
+	inventory_image = "morestuff_nextgen_tool_longsword.png",
 	tool_capabilities = {
 		full_punch_interval = 0.65,
 		max_drop_level=3,
@@ -316,9 +316,9 @@ minetest.register_tool("morestuff:sword_steel_longsword", {
 	}
 })
 
-minetest.register_tool("morestuff:sword_bloodsword", {
+minetest.register_tool("morestuff_nextgen:sword_bloodsword", {
 	description = "Blood Sword",
-	inventory_image = "morestuff_tool_bloodsword.png",
+	inventory_image = "morestuff_nextgen_tool_bloodsword.png",
 	tool_capabilities = {
 		full_punch_interval = 0.45,
 		max_drop_level=3,
@@ -330,9 +330,9 @@ minetest.register_tool("morestuff:sword_bloodsword", {
 	}
 })
 
-minetest.register_tool("morestuff:sword_excalibur", {
+minetest.register_tool("morestuff_nextgen:sword_excalibur", {
 	description = "Excalibur",
-	inventory_image = "morestuff_tool_excalibur.png",
+	inventory_image = "morestuff_nextgen_tool_excalibur.png",
 	tool_capabilities = {
 		full_punch_interval = 0.35,
 		max_drop_level=3,
@@ -344,9 +344,9 @@ minetest.register_tool("morestuff:sword_excalibur", {
 	}
 })
 
-minetest.register_tool("morestuff:sword_xcalibur", {
+minetest.register_tool("morestuff_nextgen:sword_xcalibur", {
 	description = "Xcalibur",
-	inventory_image = "morestuff_tool_xcalibur.png",
+	inventory_image = "morestuff_nextgen_tool_xcalibur.png",
 	tool_capabilities = {
 		full_punch_interval = 0.25,
 		max_drop_level=3,
@@ -361,43 +361,43 @@ minetest.register_tool("morestuff:sword_xcalibur", {
 -- Crafting
 
 minetest.register_craft( {
-	output = 'craft "morestuff:sword_earthsword" 1',
+	output = 'craft "morestuff_nextgen:sword_earthsword" 1',
 	recipe = {
-		{ '', 'craft "morestuff:green_magicite"', '' },
-		{ '', 'craft "morestuff:green_magicite"', '' },
+		{ '', 'craft "morestuff_nextgen:green_magicite"', '' },
+		{ '', 'craft "morestuff_nextgen:green_magicite"', '' },
 		{ '', 'craft "Stick"', '' },
 	}
 })
 
 minetest.register_craft( {
-	output = 'craft "morestuff:sword_watersword" 1',
+	output = 'craft "morestuff_nextgen:sword_watersword" 1',
 	recipe = {
-		{ '', 'craft "morestuff:blue_magicite"', '' },
-		{ '', 'craft "morestuff:blue_magicite"', '' },
+		{ '', 'craft "morestuff_nextgen:blue_magicite"', '' },
+		{ '', 'craft "morestuff_nextgen:blue_magicite"', '' },
 		{ '', 'craft "Stick"', '' },
 	}
 })
 
 minetest.register_craft( {
-	output = 'craft "morestuff:sword_firesword" 1',
+	output = 'craft "morestuff_nextgen:sword_firesword" 1',
 	recipe = {
-		{ '', 'craft "morestuff:red_magicite"', '' },
-		{ '', 'craft "morestuff:red_magicite"', '' },
+		{ '', 'craft "morestuff_nextgen:red_magicite"', '' },
+		{ '', 'craft "morestuff_nextgen:red_magicite"', '' },
 		{ '', 'craft "Stick"', '' },
 	}
 })
 
 minetest.register_craft( {
-	output = 'craft "morestuff:sword_icesword" 1',
+	output = 'craft "morestuff_nextgen:sword_icesword" 1',
 	recipe = {
-		{ '', 'craft "morestuff:white_magicite"', '' },
-		{ '', 'craft "morestuff:white_magicite"', '' },
+		{ '', 'craft "morestuff_nextgen:white_magicite"', '' },
+		{ '', 'craft "morestuff_nextgen:white_magicite"', '' },
 		{ '', 'craft "Stick"', '' },
 	}
 })
 
 minetest.register_craft( {
-	output = 'craft "morestuff:steel_battle_axe" 1',
+	output = 'craft "morestuff_nextgen:steel_battle_axe" 1',
 	recipe = {
 		{ 'craft "default:steel_ingot"', 'craft "default:steel_ingot"', 'craft "default:steel_ingot"' },
 		{ 'craft "default:steel_ingot"', 'craft "default:stick"', 'craft "default:steel_ingot"' },
@@ -406,7 +406,7 @@ minetest.register_craft( {
 })
 
 minetest.register_craft( {
-	output = 'craft "morestuff:mese_battle_axe" 1',
+	output = 'craft "morestuff_nextgen:mese_battle_axe" 1',
 	recipe = {
 		{ 'craft "default:mese"', 'craft "default:mese"', 'craft "default:mese"' },
 		{ 'craft "default:mese"', 'craft "default:stick"', 'craft "default:mese"' },
@@ -415,7 +415,7 @@ minetest.register_craft( {
 })
 
 minetest.register_craft( {
-	output = 'craft "morestuff:steel_longsword_blade" 1',
+	output = 'craft "morestuff_nextgen:steel_longsword_blade" 1',
 	recipe = {
 		{ '', '', '' },
 		{ 'craft "default:steel_ingot"', 'craft "default:steel_ingot"', 'craft "default:steel_ingot"' },
@@ -424,46 +424,46 @@ minetest.register_craft( {
 })
 
 minetest.register_craft( {
-	output = 'craft "morestuff:sword_steel_longsword" 1',
+	output = 'craft "morestuff_nextgen:sword_steel_longsword" 1',
 	recipe = {
-		{ '', 'craft "morestuff:steel_longsword_blade"', '' },
+		{ '', 'craft "morestuff_nextgen:steel_longsword_blade"', '' },
 		{ '', 'craft "default:stick"', '' },
 		{ '', '', '' },
 	}
 })
 
 minetest.register_craft( {
-	output = 'craft "morestuff:sword_bloodsword" 1',
+	output = 'craft "morestuff_nextgen:sword_bloodsword" 1',
 	recipe = {
-		{ '', 'craft "morestuff:gopper_ingot"', '' },
-		{ '', 'craft "morestuff:gopper_ingot"', '' },
+		{ '', 'craft "morestuff_nextgen:gopper_ingot"', '' },
+		{ '', 'craft "morestuff_nextgen:gopper_ingot"', '' },
 		{ '', 'craft "Stick"', '' },
 	}
 })
 
 minetest.register_craft( {
-	output = 'craft "morestuff:sword_excalibur" 1',
+	output = 'craft "morestuff_nextgen:sword_excalibur" 1',
 	recipe = {
-		{ '', 'craft "morestuff:xoron_ingot"', '' },
-		{ '', 'craft "morestuff:xoron_ingot"', '' },
+		{ '', 'craft "morestuff_nextgen:xoron_ingot"', '' },
+		{ '', 'craft "morestuff_nextgen:xoron_ingot"', '' },
 		{ '', 'craft "Stick"', '' },
 	}
 })
 
 minetest.register_craft( {
-	output = 'craft "morestuff:sword_xcalibur" 1',
+	output = 'craft "morestuff_nextgen:sword_xcalibur" 1',
 	recipe = {
-		{ '', 'craft "morestuff:zeron_ingot"', '' },
-		{ '', 'craft "morestuff:zeron_ingot"', '' },
+		{ '', 'craft "morestuff_nextgen:zeron_ingot"', '' },
+		{ '', 'craft "morestuff_nextgen:zeron_ingot"', '' },
 		{ '', 'craft "Stick"', '' },
 	}
 })
 
 minetest.register_craft( {
-	output = 'craft "morestuff:gopper_ingot"',
+	output = 'craft "morestuff_nextgen:gopper_ingot"',
 	recipe = {
-		{ 'craft "morestuff:xoron_ingot"'},
-		{ 'craft "morestuff:zeron_ingot"'},
+		{ 'craft "morestuff_nextgen:xoron_ingot"'},
+		{ 'craft "morestuff_nextgen:zeron_ingot"'},
 	}
 })
 
@@ -471,20 +471,20 @@ minetest.register_craft( {
 
 minetest.register_craft({
     type = "cooking",
-    output = "morestuff:nuclear_waste",
-    recipe = "morestuff:naqueda_lump",
+    output = "morestuff_nextgen:nuclear_waste",
+    recipe = "morestuff_nextgen:naqueda_lump",
 })
 
 minetest.register_craft({
     type = "cooking",
-    output = "morestuff:xoron_ingot",
-    recipe = "morestuff:xoron_lump",
+    output = "morestuff_nextgen:xoron_ingot",
+    recipe = "morestuff_nextgen:xoron_lump",
 })
 
 minetest.register_craft({
     type = "cooking",
-    output = "morestuff:zeron_ingot",
-    recipe = "morestuff:zeron_lump",
+    output = "morestuff_nextgen:zeron_ingot",
+    recipe = "morestuff_nextgen:zeron_lump",
 })
 
 -- Ore generation
@@ -531,11 +531,11 @@ local function generate_ore(name, wherein, minp, maxp, seed, chunks_per_volume, 
 end
 
 minetest.register_on_generated(function(minp, maxp, seed)
-generate_ore("morestuff:mineral_xoron", "default:stone", minp, maxp, seed+21,   1/10/10/10,    8, -31000,  -1000)
-generate_ore("morestuff:mineral_zeron", "default:stone", minp, maxp, seed+22,   1/15/15/15,    8, -31000,  -2000)
-generate_ore("morestuff:mineral_naqueda", "default:stone", minp, maxp, seed+23,   1/4/4/4,    8, -31000,  -500)
-generate_ore("morestuff:mineral_white_magicite", "default:stone", minp, maxp, seed+24,   1/20/20/20,    8, -31000,  -250)
-generate_ore("morestuff:mineral_red_magicite", "default:stone", minp, maxp, seed+25,   1/20/20/20,    8, -31000,  -250)
-generate_ore("morestuff:mineral_blue_magicite", "default:stone", minp, maxp, seed+26,   1/20/20/20,    8, -31000,  -250)
-generate_ore("morestuff:mineral_green_magicite", "default:stone", minp, maxp, seed+27,   1/20/20/20,    8, -31000,  -250)
+generate_ore("morestuff_nextgen:mineral_xoron", "default:stone", minp, maxp, seed+21,   1/10/10/10,    8, -31000,  -1000)
+generate_ore("morestuff_nextgen:mineral_zeron", "default:stone", minp, maxp, seed+22,   1/15/15/15,    8, -31000,  -2000)
+generate_ore("morestuff_nextgen:mineral_naqueda", "default:stone", minp, maxp, seed+23,   1/4/4/4,    8, -31000,  -500)
+generate_ore("morestuff_nextgen:mineral_white_magicite", "default:stone", minp, maxp, seed+24,   1/20/20/20,    8, -31000,  -250)
+generate_ore("morestuff_nextgen:mineral_red_magicite", "default:stone", minp, maxp, seed+25,   1/20/20/20,    8, -31000,  -250)
+generate_ore("morestuff_nextgen:mineral_blue_magicite", "default:stone", minp, maxp, seed+26,   1/20/20/20,    8, -31000,  -250)
+generate_ore("morestuff_nextgen:mineral_green_magicite", "default:stone", minp, maxp, seed+27,   1/20/20/20,    8, -31000,  -250)
 end)
