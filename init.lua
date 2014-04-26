@@ -40,14 +40,16 @@ minetest.register_craft({
 
 -- NAQUEDA REACTOR
 
-minetest.register_node("morestuff_nextgen:naqueda_reactor", {
-	visual_scale = 1,
-	tile_images = {"morestuff_nextgen_naqueda_reactor.png"},{"morestuff_nextgen_naqueda_reactor.png"},{"morestuff_nextgen_naqueda_reactor.png"},{"morestuff_nextgen_naqueda_reactor.png"},{"morestuff_nextgen_naqueda_reactor.png"},{"morestuff_nextgen_naqueda_reactor.png"},
-	inventory_image = "morestuff_nextgen_naqueda_reactor.png",
-	walkable = true,
-	groups = {cracky=2},
-    	description="Naqueda Reactor",
-})
+minetest.register_node("morestuff_nextgen:naqueda_reactor", 
+		       {visual_scale = 1,
+			tile_images = {"morestuff_nextgen_naqueda_reactor.png"},{"morestuff_nextgen_naqueda_reactor.png"},{"morestuff_nextgen_naqueda_reactor.png"},{"morestuff_nextgen_naqueda_reactor.png"},{"morestuff_nextgen_naqueda_reactor.png"},{"morestuff_nextgen_naqueda_reactor.png"},
+			inventory_image = "morestuff_nextgen_naqueda_reactor.png",
+			walkable = true,
+			groups = {cracky=2},
+			description="Naqueda Reactor",
+			mesecons = 
+			   {receptor = 
+			       {state = mesecon.state.on }}})
 
 minetest.register_craft({
 	output = '"morestuff_nextgen:naqueda_reactor" 1',
@@ -57,23 +59,6 @@ minetest.register_craft({
 		{'"default:steel_ingot"','"default:steel_ingot"','"default:steel_ingot"'},
 	}
 })
-
-minetest.register_on_placenode(function(pos, newnode, placer)
-	-- if newnode.name == "morestuff_nextgen:naqueda_reactor" then
-	-- 	mesecon:receptor_on(pos)
-	-- end
-end)
-
-minetest.register_on_dignode(
-	function(pos, oldnode, digger)
-		-- if oldnode.name == "morestuff_nextgen:naqueda_reactor" then
-		-- 	mesecon:receptor_off(pos)
-		-- end	
-	end
-)
-
--- mesecon:add_receptor_node("morestuff_nextgen:naqueda_reactor")
-
 
 --
 -- Blocks
